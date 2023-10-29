@@ -1,0 +1,95 @@
+[versions]
+agp = "8.1.2"
+kotlin = "1.9.10"
+
+core-ktx = "1.12.0"
+activity-compose = "1.8.0"
+appcompat = "1.6.1"
+constraintlayout = "2.1.4"
+material = "1.11.0-beta01"
+
+material3 = "1.2.0-alpha10"
+kotlinx-coroutines = "1.7.3"
+
+compose-bom = "2023.10.01"
+ui = "1.5.4"
+compose-material = "1.5.4"
+
+ui-test-junit4 = "1.5.4"
+test-junit = "1.1.5"
+espresso-core = "3.5.1"
+junit = "4.13.2"
+
+lifecycle = "2.6.2"
+
+
+[libraries]
+#   implementation
+androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "core-ktx" }
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activity-compose" }
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+androidx-constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
+material = { module = "com.google.android.material:material", version.ref = "material" }
+
+androidx-material3 = { module = "androidx.compose.material3:material3", version.ref = "material3" }
+androidx-material3-android = { module = "androidx.compose.material3:material3-android", version.ref = "material3" }
+androidx-material3-window-size = { module = "androidx.compose.material3:material3-window-size-class", version.ref = "material3" }
+
+kotlinx-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinx-coroutines" }
+
+androidx-compose-bom = { module = "androidx.compose:compose-bom", version.ref = "compose-bom" }
+androidx-ui = { module = "androidx.compose.ui:ui", version.ref = "ui" }
+androidx-ui-graphics = { module = "androidx.compose.ui:ui-graphics", version.ref = "ui" }
+androidx-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "ui" }
+androidx-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "ui" }
+androidx-ui-geometry = { module = "androidx.compose.ui:ui-geometry", version.ref = "ui" }
+androidx-foundation-layout = { module = "androidx.compose.foundation:foundation-layout", version.ref = "ui" }
+androidx-runtime-livedata = { module = "androidx.compose.runtime:runtime-livedata", version.ref = "ui" }
+androidx-animation-core = { module = "androidx.compose.animation:animation-core", version.ref = "ui" }
+androidx-animation = { module = "androidx.compose.animation:animation", version.ref = "ui" }
+androidx-ui-text = { module = "androidx.compose.ui:ui-text", version.ref = "ui" }
+androidx-ui-util = { module = "androidx.compose.ui:ui-util", version.ref = "ui" }
+androidx-ui-viewbinding = { module = "androidx.compose.ui:ui-viewbinding", version.ref = "ui" }
+androidx-material = { module = "androidx.compose.material:material", version.ref = "compose-material" }
+androidx-material-icons-core = { module = "androidx.compose.material:material-icons-core", version.ref = "compose-material" }
+androidx-material-icons-extended = { module = "androidx.compose.material:material-icons-extended", version.ref = "compose-material" }
+
+#  androidTestImplementation
+androidx-ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "ui-test-junit4" }
+androidx-espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espresso-core" }
+androidx-junit = { module = "androidx.test.ext:junit", version.ref = "test-junit" }
+
+#  testImplementation
+junit = { module = "junit:junit", version.ref = "junit" }
+
+#  debugImplementation
+androidx-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "ui-test-junit4" }
+androidx-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "ui-test-junit4" }
+
+#  ViewModel & LiveData
+androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" }
+androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
+androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle" }
+androidx-lifecycle-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycle" }
+androidx-lifecycle-viewmodel-savedstate = { module = "androidx.lifecycle:lifecycle-viewmodel-savedstate", version.ref = "lifecycle" }
+androidx-lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycle" }
+
+
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
+
+
+[bundles]
+android = ["androidx-core-ktx", "androidx-activity-compose", "androidx-appcompat", "androidx-constraintlayout", "material",
+    "androidx-material3", "androidx-material3-android", "androidx-material3-window-size", "kotlinx-coroutines"]
+
+compose = ["androidx-ui", "androidx-ui-graphics", "androidx-ui-tooling-preview", "androidx-foundation",
+    "androidx-ui-geometry", "androidx-foundation-layout", "androidx-runtime-livedata", "androidx-animation-core",
+    "androidx-animation", "androidx-ui-text", "androidx-ui-util", "androidx-ui-viewbinding", "androidx-material",
+    "androidx-material-icons-core", "androidx-material-icons-extended"]
+
+lifecycle = ["androidx-lifecycle-runtime-ktx", "androidx-lifecycle-viewmodel-ktx", "androidx-lifecycle-viewmodel-compose",
+    "androidx-lifecycle-livedata-ktx", "androidx-lifecycle-viewmodel-savedstate", "androidx-lifecycle-runtime-compose"]

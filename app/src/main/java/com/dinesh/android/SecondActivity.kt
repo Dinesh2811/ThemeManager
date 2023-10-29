@@ -4,7 +4,8 @@ import android.os.Bundle
 import androidx.compose.runtime.*
 import androidx.compose.ui.tooling.preview.*
 import androidx.compose.material.*
-import com.dinesh.android.app.ToolbarMain
+import com.dinesh.theme.app.ToolbarMain
+//import com.dinesh.android.app.ToolbarMain
 
 private val TAG = "log_" + SecondActivity::class.java.name.split(SecondActivity::class.java.name.split(".").toTypedArray()[2] + ".").toTypedArray()[1]
 

@@ -15,6 +15,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "SimpleThemeManager"
+rootProject.name = "ThemeManager"
 include(":app")
- 
+include(":theme")

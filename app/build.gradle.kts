@@ -6,7 +6,6 @@ plugins {
 android {
     namespace = "com.dinesh.android"
     compileSdk = 34
-    compileSdkPreview = "UpsideDownCake"
 
     defaultConfig {
         applicationId = "com.dinesh.android"
@@ -77,6 +76,10 @@ android {
 }
 
 dependencies {
+////    implementation(project(":permission"))
+    implementation(project(mapOf("path" to ":theme")))
+////    implementation("com.github.Dinesh2811:EasyPermissionRequest:1.1")
+
     implementation(libs.bundles.android)
     implementation(libs.bundles.compose)
     implementation(platform(libs.androidx.compose.bom))

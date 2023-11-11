@@ -15,7 +15,6 @@ import com.dinesh.theme.util.Constants.getLaunchActivity
 import com.dinesh.theme.util.sharedPreferences
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.switchmaterial.SwitchMaterial
-import kotlin.properties.Delegates
 
 private val TAG = "log_" + ThemePreference::class.java.name.split(ThemePreference::class.java.name.split(".").toTypedArray()[2] + ".").toTypedArray()[1]
 
@@ -61,7 +60,8 @@ open class ThemePreference : AppCompatActivity() {
 //            onBackNavigationAction()
 //        }
 
-        val classNameAsString by sharedPreferences("classNameTesting", LAUNCHER_ACTIVITY?.name)
+//        val classNameAsString by sharedPreferences("classNameTesting", LAUNCHER_ACTIVITY?.name)
+        val classNameAsString = LAUNCHER_ACTIVITY?.name
 
 //        val classNameAsString = getSharedPreferences("sharedPreferences_$packageName", MODE_PRIVATE).getString("classNameTesting", LAUNCHER_ACTIVITY?.name)
         if (saveLastClassNameList.size > 0) {
@@ -88,16 +88,18 @@ open class ThemePreference : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        super.onCreateOptionsMenu(menu)
         menuInflater.inflate(R.menu.toolbar_menu_main, menu)
         val selectThemeItem = menu.findItem(R.id.action_select_theme)
-        selectThemeItem.isVisible = false // Hide the menu item
+//        selectThemeItem.isVisible = false // Hide the menu item
+        selectThemeItem.isVisible = true
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.action_select_theme -> {
-                startActivity(ThemePreference::class.java)
+                launchActivity(ThemePreference::class.java)
                 true
             }
             else -> super.onOptionsItemSelected(item)

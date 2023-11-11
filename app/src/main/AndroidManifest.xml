@@ -23,9 +23,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".app.ThemePreference"/>
-        <activity android:name=".app.ToolbarMain"/>
         <activity android:name=".SecondActivity"/>
+        <activity android:name=".ThirdActivity"/>
     </application>
 
 </manifest>

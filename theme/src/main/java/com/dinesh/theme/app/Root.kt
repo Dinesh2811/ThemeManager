@@ -9,13 +9,13 @@ import java.util.LinkedList
 
 private const val TAG = "log_Root"
 
-var saveLastClassNameList: LinkedList<Class<*>> = LinkedList()
+internal var saveLastClassNameList: LinkedList<Class<*>> = LinkedList()
 
 /**
  * Saves the current activity class to the [saveLastClassNameList] if it's not already saved.
  * @param launchActivity, Launches the specified activity class and finishes the current activity.
  */
-fun Context.startActivity(launchActivity: Class<*>) {
+fun Context.launchActivity(launchActivity: Class<*>) {
     // Check if the current activity class is already saved to prevent duplicates
     if (!saveLastClassNameList.contains(this::class.java)) {
         saveLastClassNameList.addFirst(this::class.java)
@@ -26,7 +26,7 @@ fun Context.startActivity(launchActivity: Class<*>) {
     activity.finish()
 }
 
-var backButtonPressedTime = 0L
+private var backButtonPressedTime = 0L
 
 /**
  * Handles back navigation and exit behavior for an activity.
@@ -34,7 +34,7 @@ var backButtonPressedTime = 0L
  * If the activity stack is empty -> If the back button is pressed twice within two seconds, the app is exited.
  * @param defaultClassName the default class to navigate back to if the activity stack is empty.
  */
-fun Activity.onBackNavigationAction(defaultClassName: Class<*>) {
+internal fun Activity.onBackNavigationAction(defaultClassName: Class<*>) {
     val currentTime = System.currentTimeMillis()
     var lastClassName: Class<*>? = null
     if (saveLastClassNameList.isNotEmpty()) {

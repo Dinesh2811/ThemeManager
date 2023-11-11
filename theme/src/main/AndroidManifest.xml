@@ -3,7 +3,7 @@
 
     <application>
         <activity android:name=".app.ThemePreference"/>
-        <activity android:name=".app.ToolbarMain"/>
+<!--        <activity android:name=".app.ToolbarMain"/>-->
     </application>
 
 </manifest>

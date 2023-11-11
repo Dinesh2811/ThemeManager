@@ -16,13 +16,13 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
-//        debug {
-//            isMinifyEnabled = false
-//            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
-//        }
+        debug {
+            isMinifyEnabled = true
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+        }
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
@@ -42,7 +42,7 @@ publishing {
         register<MavenPublication>("release") {
             groupId = "com.github.Dinesh2811"
             artifactId = "ThemeManager"
-            version = "1.4"
+            version = "1.5"
         }
     }
     repositories {

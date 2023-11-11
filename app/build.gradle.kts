@@ -22,23 +22,23 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
-//            isShrinkResources = false
+            isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
 //            testCoverage {
 //                enableUnitTestCoverage = false
 //                enableAndroidTestCoverage = false
 //            }
         }
-//        debug {
-//            isMinifyEnabled = false
-//            isShrinkResources = false
+        debug {
+            isMinifyEnabled = true
+            isShrinkResources = true
 //            testCoverage {
 //                enableUnitTestCoverage = true
 //                enableAndroidTestCoverage = true
 //            }
-//            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
-//        }
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+        }
     }
 
     compileOptions {

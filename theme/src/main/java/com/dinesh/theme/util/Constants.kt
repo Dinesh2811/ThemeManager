@@ -6,12 +6,6 @@ import android.content.pm.ResolveInfo
 import android.util.Log
 
 object Constants {
-//    val LAUNCHER_ACTIVITY = com.dinesh.android.MainActivity::class.java
-
-//    fun getStartActivity(startActivity: Class<*>): Class<*> {
-//        return startActivity
-//    }
-
     fun getLaunchActivity(context: Context): Class<*>? {
         val packageManager = context.packageManager
         val intent = packageManager.getLaunchIntentForPackage(context.packageName)
@@ -23,5 +17,4 @@ object Constants {
             null
         }
     }
-
 }

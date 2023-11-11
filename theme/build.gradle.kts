@@ -36,6 +36,7 @@ dependencies {
 //    implementation(libs.androidx.appcompat)
     implementation(libs.bundles.android)
 }
+
 publishing {
     publications {
         register<MavenPublication>("release") {

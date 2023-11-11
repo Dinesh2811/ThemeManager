@@ -41,7 +41,8 @@ internal fun Activity.onBackNavigationAction(defaultClassName: Class<*>) {
         lastClassName = saveLastClassNameList.poll()
     }
 
-    if (lastClassName != null && this::class.java != lastClassName && defaultClassName != lastClassName) {
+//    if (lastClassName != null && this::class.java != lastClassName && defaultClassName != lastClassName) {
+    if (lastClassName != null && this::class.java != lastClassName) {
         // Navigate back to the last activity
         startActivity(Intent(this, lastClassName))
         finish()

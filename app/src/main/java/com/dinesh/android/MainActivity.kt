@@ -1,5 +1,6 @@
 package com.dinesh.android
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
@@ -16,8 +17,8 @@ import com.dinesh.android.ui.theme.Material3Theme
 import com.dinesh.theme.app.ThemePreference
 import com.dinesh.theme.app.launchActivity
 
-//class MainActivity : ComponentActivity() {
-class MainActivity : ThemePreference() {
+class MainActivity : ComponentActivity() {
+//class MainActivity : ThemePreference() {
     private val TAG = "log_" + MainActivity::class.java.name.split(MainActivity::class.java.name.split(".").toTypedArray()[2] + ".").toTypedArray()[1]
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,11 +30,14 @@ class MainActivity : ThemePreference() {
                     Text(
                         text = "Hello!",
                         modifier = Modifier.clickable {
-                            launchActivity(SecondActivity::class.java)
+//                            launchActivity(SecondActivity::class.java)
+                            startActivity(Intent(this, SecondActivity::class.java))
                         }
                     )
                 }
             }
+            startActivity(Intent(this, SecondActivity::class.java))
+
         }
 
     }

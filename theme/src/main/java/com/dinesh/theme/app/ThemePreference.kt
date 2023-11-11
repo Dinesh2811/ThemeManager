@@ -23,8 +23,6 @@ open class ThemePreference : AppCompatActivity() {
     lateinit var v: View
     lateinit var toolbar: MaterialToolbar
     private val LAUNCHER_ACTIVITY by lazy { getLaunchActivity(this) }
-//        private var currentTheme by sharedPreferences("Theme", R.style.Theme_Material3)
-//        private var classNameAsString by sharedPreferences("classNameTesting", LAUNCHER_ACTIVITY?.name)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,7 +40,6 @@ open class ThemePreference : AppCompatActivity() {
     }
 
     private fun onExit() {
-//        removeFancySnackBar()
         removeParentLayout()
     }
 
@@ -51,6 +48,7 @@ open class ThemePreference : AppCompatActivity() {
         parentLayout = findViewById(R.id.frameLayoutMain)
         toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
+        toolbar.navigationIcon = null
 
         v = LayoutInflater.from(this).inflate(layout, parentLayout, false)
         parentLayout.addView(v)
@@ -60,17 +58,18 @@ open class ThemePreference : AppCompatActivity() {
 //            onBackNavigationAction()
 //        }
 
-//        val classNameAsString by sharedPreferences("classNameTesting", LAUNCHER_ACTIVITY?.name)
         val classNameAsString = LAUNCHER_ACTIVITY?.name
 
-//        val classNameAsString = getSharedPreferences("sharedPreferences_$packageName", MODE_PRIVATE).getString("classNameTesting", LAUNCHER_ACTIVITY?.name)
         if (saveLastClassNameList.size > 0) {
-            if (this::class.java == saveLastClassNameList.first || LAUNCHER_ACTIVITY == saveLastClassNameList.first) {
+//            if (this::class.java == saveLastClassNameList.first || LAUNCHER_ACTIVITY == saveLastClassNameList.first) {
+            if (this::class.java == saveLastClassNameList.first) {
+                Log.e(TAG, "setContentViewLayout: if")
                 toolbar.navigationIcon = null
                 if (classNameAsString != LAUNCHER_ACTIVITY?.name && this::class.java.name != LAUNCHER_ACTIVITY?.name){
                     toolbar.setNavigationIcon(R.drawable.baseline_home_24)
                 }
             } else{
+                Log.e(TAG, "setContentViewLayout: else")
                 toolbar.setNavigationIcon(R.drawable.baseline_arrow_back_24)
             }
         }

@@ -22,8 +22,8 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = true
-            isShrinkResources = true
+            isMinifyEnabled = false
+            isShrinkResources = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
 //            testCoverage {
 //                enableUnitTestCoverage = false
@@ -31,8 +31,8 @@ android {
 //            }
         }
         debug {
-            isMinifyEnabled = true
-            isShrinkResources = true
+            isMinifyEnabled = false
+            isShrinkResources = false
 //            testCoverage {
 //                enableUnitTestCoverage = true
 //                enableAndroidTestCoverage = true

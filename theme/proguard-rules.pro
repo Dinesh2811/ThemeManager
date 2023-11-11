@@ -20,11 +20,7 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
--keep class * implements com.dinesh.*
--keep class * implements com.dinesh.theme.*
--keep class * implements com.dinesh.theme.app.*
--keep class * implements com.dinesh.theme.util.*
--dontwarn java.lang.invoke.*
--dontwarn java.lang.String.*
--dontwarn java.lang.*
+#-dontwarn java.lang.invoke.*
+#-dontwarn java.lang.String.*
+#-dontwarn java.lang.*
 -dontwarn java.lang.invoke.StringConcatFactory

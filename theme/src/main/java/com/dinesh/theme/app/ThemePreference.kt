@@ -16,8 +16,6 @@ import com.dinesh.theme.util.sharedPreferences
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.switchmaterial.SwitchMaterial
 
-private val TAG = "log_" + ThemePreference::class.java.name.split(ThemePreference::class.java.name.split(".").toTypedArray()[2] + ".").toTypedArray()[1]
-
 open class ThemePreference : AppCompatActivity() {
     open lateinit var parentLayout: FrameLayout
     lateinit var v: View
@@ -63,13 +61,11 @@ open class ThemePreference : AppCompatActivity() {
         if (saveLastClassNameList.size > 0) {
 //            if (this::class.java == saveLastClassNameList.first || LAUNCHER_ACTIVITY == saveLastClassNameList.first) {
             if (this::class.java == saveLastClassNameList.first) {
-                Log.e(TAG, "setContentViewLayout: if")
                 toolbar.navigationIcon = null
                 if (classNameAsString != LAUNCHER_ACTIVITY?.name && this::class.java.name != LAUNCHER_ACTIVITY?.name){
                     toolbar.setNavigationIcon(R.drawable.baseline_home_24)
                 }
             } else{
-                Log.e(TAG, "setContentViewLayout: else")
                 toolbar.setNavigationIcon(R.drawable.baseline_arrow_back_24)
             }
         }
@@ -118,7 +114,6 @@ open class ThemePreference : AppCompatActivity() {
     private val onBackPressedCallback = object : OnBackPressedCallback(true) {
         override fun handleOnBackPressed() {
             LAUNCHER_ACTIVITY?.let { onBackNavigationAction(it) }
-            Log.e(TAG, "onBackPressedCallback: ")
         }
     }
 

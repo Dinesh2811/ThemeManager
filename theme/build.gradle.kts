@@ -16,11 +16,11 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = true
+            isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
         debug {
-            isMinifyEnabled = true
+            isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
@@ -42,7 +42,7 @@ publishing {
         register<MavenPublication>("release") {
             groupId = "com.github.Dinesh2811"
             artifactId = "ThemeManager"
-            version = "1.6"
+            version = "1.7"
         }
     }
     repositories {

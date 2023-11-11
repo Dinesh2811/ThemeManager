@@ -4,6 +4,6 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.github.Dinesh2811</groupId>
   <artifactId>ThemeManager</artifactId>
-  <version>1.6</version>
+  <version>1.7</version>
   <packaging>pom</packaging>
 </project>

@@ -42,7 +42,7 @@ publishing {
         register<MavenPublication>("release") {
             groupId = "com.github.Dinesh2811"
             artifactId = "ThemeManager"
-            version = "1.1"
+            version = "1.2"
         }
     }
     repositories {

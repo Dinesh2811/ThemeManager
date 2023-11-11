@@ -37,16 +37,16 @@ dependencies {
     implementation(libs.bundles.android)
 }
 
-//publishing {
-//    publications {
-//        register<MavenPublication>("release") {
-//            groupId = "com.github.Dinesh2811"
-//            artifactId = "ThemeManager"
-//            version = "1.0"
-//        }
-//    }
-//    repositories {
-//        mavenLocal()
-//    }
-//}
+publishing {
+    publications {
+        register<MavenPublication>("release") {
+            groupId = "com.github.Dinesh2811"
+            artifactId = "ThemeManager"
+            version = "1.0"
+        }
+    }
+    repositories {
+        mavenLocal()
+    }
+}
 

@@ -78,7 +78,7 @@ android {
 dependencies {
 ////    implementation(project(":permission"))
     implementation(project(mapOf("path" to ":theme")))
-////    implementation("com.github.Dinesh2811:EasyPermissionRequest:1.1")
+////    implementation("com.github.Dinesh2811:ThemeManager:1.0")
 
     implementation(libs.bundles.android)
     implementation(libs.bundles.compose)
